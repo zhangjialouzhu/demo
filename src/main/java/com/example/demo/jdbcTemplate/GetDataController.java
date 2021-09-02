@@ -14,21 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
 
-@Controller
+//@Controller
 public class GetDataController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-  /*  @RequestMapping(value = "/test1")
-    @ResponseBody
-    public BaseResult test1(HttpServletResponse response,SqlBean sqlBean) throws Exception{
-        BaseResult baseResult = new BaseResult();
-        String sql = SQLUtil.createSql(sqlBean);
-        jdbcTemplate.execute("select  1 from dual");
-        List<Map<String, Object>> list = jdbcTemplate.queryForList("select  * from Temp_appl");
-        baseResult.setData(list);
-        baseResult.setMessage("ssss");
-        return baseResult;
-    }*/
+
+    /**
+     * 插寻数据库
+     * @param response
+     * @param sqlBean
+     * @throws Exception
+     */
     @RequestMapping(value = "/test")
     @ResponseBody
     public void test(HttpServletResponse response,SqlBean sqlBean) throws Exception{

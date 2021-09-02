@@ -113,9 +113,8 @@
             <artifactId>junit</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.shalousun</groupId>
-            <artifactId>common-util</artifactId>
-            <version>2.0.8</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
@@ -136,7 +135,7 @@
                 <version>2.2.1</version>
                 <configuration>
                     <!--指定生成文档的使用的配置文件,配置文件放在自己的项目中-->
-                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                    <configFile>./src/main/resources/json/smart-doc.json</configFile>
                     <!--指定项目名称-->
                     <projectName>测试</projectName>
                     <!--smart-doc实现自动分析依赖树加载第三方依赖的源码，如果一些框架依赖库加载不到导致报错，这时请使用excludes排除掉-->

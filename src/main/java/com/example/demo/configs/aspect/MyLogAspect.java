@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @Aspect
 public class MyLogAspect {
     private final Logger logger = LoggerFactory.getLogger(MyLogAspect.class);
@@ -15,11 +15,12 @@ public class MyLogAspect {
     /**
      *   execution(* com.example.demo.*.*(..))
      *   第一个 * 表示任意返回值
-     *   第二个 * 表示demo包中的所有类
-     *   第三个 * 表示类中的所有方法
+     *   第二个 * 表示demo包中的所有包
+     *   第三个 * 表示包中的所有类
+     *   第四个 * 表示类中所有方法
      *   .. 表示任意参数
      */
-    @Pointcut("execution(* com.example.demo.*.*(..))")
+    @Pointcut("execution(* com.example.demo.*.*.*(..))")
     public void pointcut(){
 
     }
@@ -32,7 +33,7 @@ public class MyLogAspect {
     @After(value = "pointcut()")
     public void after(JoinPoint joinPoint){
         String name = joinPoint.getSignature().getName();
-        logger.info(name+"():方法开始执行");
+        logger.info(name+"():执行结束");
     }
     @AfterReturning(value = "pointcut()",returning = "result")
     public void afterRunning(JoinPoint joinPoint,Object result){
