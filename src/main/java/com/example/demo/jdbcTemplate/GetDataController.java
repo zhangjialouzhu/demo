@@ -33,7 +33,7 @@ public class GetDataController {
     @ResponseBody
     public void test(HttpServletResponse response,SqlBean sqlBean) throws Exception{
         String sql = SQLUtil.createSql(sqlBean);
-        jdbcTemplate.execute("select  1 from dual");
+        jdbcTemplate.execute("");
         List<Map<String, Object>> list = jdbcTemplate.queryForList("SELECT m.* from PATENT_MAIN m");
         if(list.size()==0){
             return;
