@@ -20,7 +20,7 @@ public class GetDataController {
     private JdbcTemplate jdbcTemplate;
 
     /**
-     * 插寻数据库
+     * 查询数据库
      * @param response
      * @param sqlBean
      * @throws Exception

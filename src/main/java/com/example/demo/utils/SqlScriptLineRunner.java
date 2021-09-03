@@ -11,7 +11,7 @@ import java.util.*;
 
 public class SqlScriptLineRunner {
     public static void main(String[] args) {
-      /*  Map<String,List<String>> map = new HashMap<>();
+        Map<String,List<String>> map = new HashMap<>();
         List<String> list88 = new ArrayList() ;
         list88.add("PATENTMONITOR_XUZHOU     ");
         list88.add("PATENTMONITOR_BAOYING    ");
@@ -72,7 +72,7 @@ public class SqlScriptLineRunner {
                 System.out.println(count);
             }
         }
-*/
+/*
         String driver1 = "oracle.jdbc.OracleDriver";
         String url1 = "jdbc:oracle:thin:@12.0.0.86:1521:orcl";
         String username1 = "patent_clean_test";
@@ -89,13 +89,12 @@ public class SqlScriptLineRunner {
 
             DataSource dataSource2 = getDataSource(driver2,url2,username2,password2);
             JdbcTemplate jdbcTemplate2 = getJdbcTemplate(dataSource2);
-            List<String> list2 = jdbcTemplate2.queryForList("select appno from PATENT_MAIN where appno not in (select appno from PATENT_MAIN_ADD) ",String.class);
-            list1.retainAll(list2);
+            List<String> list2 = jdbcTemplate2.queryForList("select appno from PATENT_MAIN where appno not in (select appno from PATENT_MAIN_ADD) ",String.class);            list1.retainAll(list2);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-
+*/
     }
     public static DataSource getDataSource(String driver,String url,String user,String name){
         DataSource dataSource = null;
