@@ -33,6 +33,7 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.78</version>
         </dependency>
+        <!--阿里druid数据库链接依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
@@ -124,6 +125,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <!--fork:如果没有该项配置,整个devtools不会起作用-->
                     <fork>true</fork>
                     <addResources>true</addResources>
                 </configuration>
